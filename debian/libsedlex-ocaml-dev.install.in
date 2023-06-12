@@ -1,0 +1,10 @@
+@OCamlStdlibDir@/sedlex/dune*
+@OCamlStdlibDir@/sedlex/{,**/}*.cmi
+@OCamlStdlibDir@/sedlex/{,**/}*.cmt
+@OCamlStdlibDir@/sedlex/{,**/}*.cmti
+@OCamlStdlibDir@/sedlex/{,**/}*.ml
+@OCamlStdlibDir@/sedlex/{,**/}*.mli
+@OCamlStdlibDir@/sedlex/{,**/}*.exe
+OPT: @OCamlStdlibDir@/sedlex/{,**/}*.a
+OPT: @OCamlStdlibDir@/sedlex/{,**/}*.cmxa
+OPT: @OCamlStdlibDir@/sedlex/{,**/}*.cmx

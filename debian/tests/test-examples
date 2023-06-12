@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+testdir=$(mktemp -d)
+trap "rm -rf ${testdir}" 0 INT QUIT ABRT PIPE TERM
+
+cp -r "$(dirname "$0")/../../examples" "${testdir}/example"
+cd "${testdir}/example"
+
+sed -i 's/sedlex_ppx/sedlex.ppx/g' dune
+
+echo "(lang dune 2.9)" > dune-project
+dune build @runtest --verbose
+
+echo "test: OK"

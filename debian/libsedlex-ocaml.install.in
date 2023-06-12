@@ -1,0 +1,4 @@
+@OCamlStdlibDir@/sedlex/META
+@OCamlStdlibDir@/sedlex/opam
+@OCamlStdlibDir@/sedlex/{,**/}*.cma
+DYN: @OCamlStdlibDir@/sedlex/{,**/}*.cmxs
