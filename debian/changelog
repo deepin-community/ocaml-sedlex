@@ -1,5 +1,85 @@
-template-repository (1.0-1) unstable; urgency=medium
+ocaml-sedlex (3.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * Fix d/watch.
+  * Bump Standards-Version to 4.6.1.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 12 Oct 2022 08:28:27 +0200
+
+ocaml-sedlex (2.5-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 27 Jan 2022 15:24:44 +0100
+
+ocaml-sedlex (2.5-1) unstable; urgency=medium
+
+  [ Stéphane Glondu ]
+  * Team upload
+  * New upstream release
+  * Bump Standards-Version to 4.6.0
+  * Update debian/watch
+
+  [ Edward Betts ]
+  * Upstream GitHub repo has moved, update URL.
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 21 Jan 2022 05:51:37 +0100
+
+ocaml-sedlex (2.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump debhelper compat level to 13
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Requires-Root: no
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 28 Jul 2020 11:48:14 +0200
+
+ocaml-sedlex (2.1-5) unstable; urgency=high
+
+  * Team upload
+  * Tighten the dependency to ocaml-dune
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 06 Feb 2020 07:19:22 +0100
+
+ocaml-sedlex (2.1-4) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtests with dune 2.1.3
+
+ -- Stéphane Glondu <glondu@debian.org>  Tue, 28 Jan 2020 07:19:05 +0100
+
+ocaml-sedlex (2.1-3) unstable; urgency=medium
+
+  * Rebuild against ocaml-gen (for armhf).
+
+ -- Andy Li <andy@onthewings.net>  Tue, 12 Nov 2019 10:31:55 +0800
+
+ocaml-sedlex (2.1-2) unstable; urgency=medium
+
+  * Remove dependency on uchar. (#944404)
+
+ -- Andy Li <andy@onthewings.net>  Sun, 10 Nov 2019 10:02:09 +0800
+
+ocaml-sedlex (2.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Remove ppx_tools_versioned-521.patch, which is no longer needed.
+  * Bump Standards-Version to 4.4.1 (no changes).
+
+ -- Andy Li <andy@onthewings.net>  Sun, 03 Nov 2019 09:42:00 +0800
+
+ocaml-sedlex (1.99.4-2) unstable; urgency=medium
+
+  * Add ppx_tools_versioned-521.patch that fixes compatibility with
+    ppx_tools_versioned 5.2.1.
+  * Bump Standards-Version to 4.3.0 (no changes).
+
+ -- Andy Li <andy@onthewings.net>  Wed, 26 Dec 2018 15:48:38 +0800
+
+ocaml-sedlex (1.99.4-1) unstable; urgency=low
+
+  * Initial release. (Closes: #867238)
+
+ -- Andy Li <andy@onthewings.net>  Mon, 06 Aug 2018 11:36:25 +0800

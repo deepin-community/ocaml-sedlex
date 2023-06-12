@@ -1,15 +1,48 @@
-Source: template-repository
-Section: unknown
+Source: ocaml-sedlex
+Section: ocaml
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
+Uploaders: Andy Li <andy@onthewings.net>
+Standards-Version: 4.6.1
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ ocaml,
+ ocaml-dune (>= 2),
+ libgen-ocaml-dev,
+ libppxlib-ocaml-dev (>= 0.18.0),
+ ocaml-findlib,
+ dh-ocaml
+Homepage: https://github.com/ocaml-community/sedlex
+Vcs-Browser: https://salsa.debian.org/ocaml-team/ocaml-sedlex
+Vcs-Git: https://salsa.debian.org/ocaml-team/ocaml-sedlex.git
 
-Package: template-repository
+Package: libsedlex-ocaml
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${ocaml:Depends}
+Provides:
+ ${ocaml:Provides}
+Recommends: ocaml-findlib
+Description: Unicode-friendly lexer generator for OCaml (Runtime library)
+ A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.
+ Contrary to ocamllex, lexer specifications for sedlex are embedded in regular
+ OCaml source files.
+
+Package: libsedlex-ocaml-dev
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${ocaml:Depends}
+Provides:
+ ${ocaml:Provides}
+Breaks:
+ ocaml-dune (<< 2)
+Recommends: ocaml-findlib
+Description: Unicode-friendly lexer generator for OCaml (Development package)
+ A lexer generator for OCaml, similar to ocamllex, but supporting Unicode.
+ Contrary to ocamllex, lexer specifications for sedlex are embedded in regular
+ OCaml source files.
